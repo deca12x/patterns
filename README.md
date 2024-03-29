@@ -5,7 +5,8 @@
 3. Create various versions with different design patterns that pass the tests
 4. Optimise gas
 
-<img width="704" alt="Screenshot 2024-03-27 at 16 48 25" src="https://github.com/deca12x/patterns/assets/74135582/bf184fcf-4e48-4dab-a69d-b91ab157cc0c">
+<img width="268" alt="Screenshot 2024-03-29 at 18 22 31" src="https://github.com/deca12x/patterns/assets/74135582/835d2db7-0971-441a-b56a-5ce318c77919">
+
 
 
 # <h1 align="center"> Forge Template </h1>
