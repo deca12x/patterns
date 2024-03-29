@@ -1,3 +1,10 @@
+# <h1 align="center"> Final Project, Expert Solidity Bootcamp, Encode Club, Mar 2024 </h1>
+
+1. Take contracts from ZK bootcamp final project of @hroyo & @BigBangInfinity https://github.com/hroyo/Zk-encode
+2. Write Foundry Tests
+3. Create various versions with different design patterns that pass the tests
+4. Optimise gas
+
 # <h1 align="center"> Forge Template </h1>
 
 **Template repository for getting started quickly with Foundry projects**
