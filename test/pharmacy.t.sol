@@ -11,34 +11,50 @@ contract PharmacyTest is Test {
     MedicinePurchase private pharmacy;
     Verifier internal verifier;
     address internal deployer;
+    ErrorsTest test;
 
     function setUp() public {
         deployer = msg.sender;
         verifier = new Verifier();
         pharmacy = new MedicinePurchase(address(verifier));
+        test = new ErrorsTest();
     }
 
-    function testBar() public {
-        assertEq(uint256(1), uint256(1), "ok");
+    function logAddresses() public {
+        emit log("Pharmacy contract address:");
+        emit log_address(address(this));
+        emit log("Verifier contract address:");
+        emit log_address(address(verifier));
+        emit log("Pharmacy Test address:");
+        emit log_address(address(this));
     }
+
+    function testGetPharmacyOwner() public {
+        assertEq(pharmacy.owner(), address(this), "ok");
+        // assertTrue(pharmacy.owner() == address(this));
+    }
+
+    // function testSetA() public {
+    //     address newOwner = address(verifier);
+    //     pharmacy.store(newOwner);
+    //     assertTrue(a.retrieve() == 123);
+    // }
+
+    // function testExpectArithmetic() public {
+    //     vm.expectRevert(stdError.arithmeticError);
+    //     test.arithmeticError(10);
+    // }
+
+    // assertTrue(...condition);
 
     // function testFoo(uint256 x) public {
     //     vm.assume(x < type(uint128).max);
     //     assertEq(x + x, x * 2);
     // }
+}
 
-    function test_Log() public {
-        emit log("here");
-        emit log_address(address(this));
+contract ErrorsTest {
+    function arithmeticError(uint256 a) public {
+        uint256 a = a - 100;
     }
-
-    function test_GetValue() public {
-        assertTrue(pharmacy.owner() == address(this));
-    }
-
-    // function test_SetValue() public {
-    //     uint256 x = 123;
-    //     a.store(x);
-    //     assertTrue(a.retrieve() == 123);
-    // }
 }
