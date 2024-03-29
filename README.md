@@ -5,7 +5,8 @@
 3. Create various versions with different design patterns that pass the tests
 4. Optimise gas
 
-{"type":"excalidraw/clipboard","elements":[{"type":"rectangle","version":1039,"versionNonce":1407421798,"isDeleted":false,"id":"8R4ploNjhA2y0RGWpHxuz","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":1,"opacity":100,"angle":0,"x":1855.0727741662986,"y":1599.5939331194145,"strokeColor":"#1e1e1e","backgroundColor":"#ffec99","width":192.6127005034738,"height":117.66055934736596,"seed":1052347002,"groupIds":[],"frameId":null,"roundness":{"type":3},"boundElements":[{"type":"text","id":"l5lKGyR5ayVUAJ1PWO09m"},{"id":"U_8BF6DfnAywx8fNfnUSj","type":"arrow"}],"updated":1711736018770,"link":null,"locked":false},{"type":"text","version":1305,"versionNonce":1612247206,"isDeleted":false,"id":"l5lKGyR5ayVUAJ1PWO09m","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":1,"opacity":100,"angle":0,"x":1874.7291915567073,"y":1633.4242127930975,"strokeColor":"#1e1e1e","backgroundColor":"#ffc9c9","width":153.29986572265625,"height":50,"seed":852896570,"groupIds":[],"frameId":null,"roundness":null,"boundElements":[],"updated":1711736018770,"link":null,"locked":false,"fontSize":20,"fontFamily":1,"text":"Implementation \nContract 1","textAlign":"center","verticalAlign":"middle","containerId":"8R4ploNjhA2y0RGWpHxuz","originalText":"Implementation Contract 1","lineHeight":1.25}],"files":{}}
+<img width="704" alt="Screenshot 2024-03-27 at 16 48 25" src="https://github.com/deca12x/patterns/assets/74135582/bf184fcf-4e48-4dab-a69d-b91ab157cc0c">
+
 
 # <h1 align="center"> Forge Template </h1>
 
