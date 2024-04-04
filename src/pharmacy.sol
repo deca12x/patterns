@@ -25,6 +25,7 @@ interface IVerifier {
 contract MedicinePurchase {
     IVerifier public verifier;
     address public owner;
+    bool isInitialized;
 
     // Event declarations
     event BuyMedicineA(address indexed buyer);
@@ -35,9 +36,11 @@ contract MedicinePurchase {
         _;
     }
 
-    constructor(address verifierAddress) {
+    function initialize(address verifierAddress) public {
+        require(!isInitialized, "Contract is already initialized!");
+        isInitialized = true;
         verifier = IVerifier(verifierAddress);
-        owner = msg.sender; // Set the deployer as the owner
+        owner = msg.sender;
     }
 
     function buyMedicineA(IVerifier.Proof memory proof) public payable {

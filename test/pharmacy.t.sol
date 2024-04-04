@@ -7,7 +7,6 @@ import {MedicinePurchase, IVerifier} from "../src/pharmacy.sol";
 import {Verifier, Pairing} from "../src/verifier.sol";
 
 contract PharmacyTest is Test {
-    // Variable for contract instance
     MedicinePurchase private pharmacy;
     Verifier internal verifier;
     address internal deployer;
@@ -15,7 +14,8 @@ contract PharmacyTest is Test {
     function setUp() public {
         deployer = msg.sender;
         verifier = new Verifier();
-        pharmacy = new MedicinePurchase(address(verifier));
+        pharmacy = new MedicinePurchase();
+        pharmacy.initialize(address(verifier));
     }
 
     function testLogAddresses() public {

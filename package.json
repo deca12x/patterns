@@ -1,0 +1,22 @@
+{
+  "name": "patterns",
+  "version": "1.0.0",
+  "description": "1. Take contracts from ZK bootcamp final project of @hroyo & @BigBangInfinity https://github.com/hroyo/Zk-encode 2. Write Foundry Tests 3. Create various versions with different design patterns that pass the tests 4. Optimise gas",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/hardhat-upgrades": "^3.0.5",
+    "ethers": "^6.11.1",
+    "hardhat": "^2.22.2"
+  }
+}
