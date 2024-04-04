@@ -29,7 +29,7 @@ async function main() {
   await pharmacy2.waitForDeployment();
   console.log("Pharmacy upgraded");
 
-  // DEPLOY UUPS PHARMACY
+  // DEPLOY UUPS PHARMACY (need to tweak it)
   // const pharmacyUUPS = await upgrades.deployProxy(
   //   pharmacyFactory,
   //   [verifierAddress],
