@@ -18,7 +18,7 @@ contract PharmacyTest is Test {
         pharmacy.initialize(address(verifier));
     }
 
-    function testLogAddresses() public {
+    function logAddresses() public {
         emit log("Pharmacy contract address:");
         emit log_address(address(pharmacy));
         emit log("Verifier contract address:");

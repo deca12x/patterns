@@ -4,9 +4,6 @@ const { ethers, upgrades } = require("hardhat");
 // import { Verifier } from "../src/verifier.sol";
 
 async function main() {
-  const signers = await ethers.getSigners();
-  const firstSignerAddress: string = signers[0].address;
-
   // DEPLOY VERIFIER CONTRACT
   const verifierFactory = await ethers.getContractFactory("Verifier");
   const verifier = await verifierFactory.deploy();
@@ -14,16 +11,33 @@ async function main() {
   const verifierAddress = await verifier.getAddress();
   console.log("Verifier deployed to:", verifierAddress);
 
-  // DEPLOY PHARMACY IMPLEMENTATION CONTRACT WITH OPENZEPPELIN UPGRADES PLUGIN
+  // DEPLOY UPGRADABLE PHARMACY WITH OPENZEPPELIN UPGRADES PLUGIN
   const pharmacyFactory = await ethers.getContractFactory("MedicinePurchase");
   const pharmacy = await upgrades.deployProxy(pharmacyFactory, [
     verifierAddress,
   ]);
   await pharmacy.waitForDeployment();
-  console.log(
-    "Pharmacy implementation deployed to:",
-    await pharmacy.getAddress()
+  const pharmacyAddress = await pharmacy.getAddress();
+  console.log("Pharmacy Proxy deployed to:", pharmacyAddress);
+
+  // DEPLOY V2
+  const pharmacyFactory2 = await ethers.getContractFactory("MedicinePurchase2");
+  const pharmacy2 = await upgrades.upgradeProxy(
+    pharmacyAddress,
+    pharmacyFactory2
   );
+  await pharmacy2.waitForDeployment();
+  console.log("Pharmacy upgraded");
+
+  // DEPLOY UUPS PHARMACY (need to tweak it)
+  // const pharmacyUUPS = await upgrades.deployProxy(
+  //   pharmacyFactory,
+  //   [verifierAddress],
+  //   { kind: "uups" }
+  // );
+  // await pharmacyUUPS.waitForDeployment();
+  // const pharmacyUUPSAddress = await pharmacyUUPS.getAddress();
+  // console.log("Pharmacy UUPS Proxy deployed to:", pharmacyUUPSAddress);
 }
 
 main().catch((error) => {

@@ -1,1 +1,6 @@
-TestContract:testBar() (gas: 401)
+PharmacyTest:testGetPharmacyOwner() (gas: 7829)
+PharmacyTest:testLogAddresses() (gas: 7698)
+PharmacyTest:testVerifyTx() (gas: 1296731)
+PharmacyTest:testWithdraw() (gas: 13437)
+PharmacyTest:testbuyMedicineA() (gas: 469613)
+PharmacyTest:testbuyMedicineB() (gas: 240852)
