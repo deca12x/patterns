@@ -1,5 +1,7 @@
 # <h1 align="center"> Final Project, Expert Solidity Bootcamp, Encode Club, Mar 2024 </h1>
 
+A project by @deca12x & @BigBangInfinity
+
 1. Take contracts from ZK bootcamp final project of @hroyo & @BigBangInfinity https://github.com/hroyo/Zk-encode
 2. Write Foundry Tests
 3. Create various versions with different design patterns that pass the tests
